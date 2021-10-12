@@ -1,0 +1,13 @@
+<br><br>
+<div class="container">
+    <table class="table table-hover">
+<tbody *ngFor="let fourniseur of list" >
+<div *ngIf="fourniseur.idFournisseur<=100" [style.background-color]="fourniseur.libelle=='hp'?'green':'yellow'" [style.font-size]=getColor(fourniseur)>
+        <tr (click)="delete(fourniseur)">idFournisseur :{{fourniseur.idFournisseur}}</tr>
+        <tr>code : {{fourniseur.code}}</tr>
+        <tr>libelle : {{fourniseur.libelle}}</tr>
+
+</div>
+</tbody>
+</table>
+</div>
